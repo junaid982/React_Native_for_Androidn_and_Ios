@@ -52,8 +52,162 @@ or
 
 
 
+===================================================
+4 - install android Studio
+
+https://developer.android.com/studio
+
+or you can find the android studio Link in 
+this Link : https://reactnative.dev/docs/environment-setup?guide=native
+
+
+
+Install Android Studio with default settings 
+and Last CLick on Finish 
+
+
+* Import Android Studeo Settings 
+	Do not import 
+
+Click Ok
+
+
+*Install Type 
+	Standerd
+
+
+Click Next
+
+
+* Licence and Agrement 
+	Accept All 
+
+
+Click Finish
+
+
+when This Propmt is Appear 
+---------------------------------------------
+*======== Welcome To Android Studio =====
+
+New Project		Open 		Get from Vcs
+
+		
+			More Actions >
+
+---------------------------------------------
+
+CLick on More Action and Select SDK Manager
+
+
+SDK Manager will Open 
+Check on 
+
+Show Package Details  ( Bottom Right )
+
+
+
+Find Android 13.0 (Tiramisu)
+check 
+* SDK Platform 33
+* Sources for Android 33
+* Intel x86_64 Atom System Image
+* Google Api Intel x86_64 Atom System Image
+-----------------------------------------
+
+Click on Apply 
+
+Wait Download 
+and Ok 
 
 
 
 
+
+===============================================================
+5. Configure the ANDROID_HOME environment variable ( User )
+
+This PC (Properties ) ==>  Advance System Setting ==>  Enviroment Variable ==>
+
+or 
+
+Click on Windows Start Button and 
+Search 
+
+Enviroment Variable 
+
+(Upper User Variable )
+
+Click on New 
+
+Variable Name :  ANDROID_HOME
+Variable Value : C:\Users\ansar\AppData\Local\Android\Sdk   ( Locate on your System )
+
+
+And Save 
+
+
+
+Check Variable is set or not 
+
+
+Open PowerShell (as administrator)
+
+>>> Get-ChildItem -Path Env:\
+
+
+
+===============================================================
+
+6 - Add platform-tools to Path  ( System Variable )
+
+Open Enviroment variable 
+
+
+
+This PC (Properties ) ==>  Advance System Setting ==>  Enviroment Variable ==>
+
+inside System Variable Click on 
+
+Path ==> New 
+
+Add C:\Users\ansar\AppData\Local\Android\Sdk\platform-tools ( Locate on your System )
+
+and save 
+
+
+
+Check 
+
+Open Android Studio 
+
+Select Virtual Device Manager 
+
+===============================================================
+
+7 -  Enable Hyper-V
+
+
+Press Windows Button and Search 
+
+Turen Windows Feature Turn on or off 
+
+
+Check Hyper-V 
+
+and save
+
+===============================================================
+
+8 - Install React Native 
+
+open cmd 
+
+uninstall existing react native 
+
+>>> npm uninstall -g react-native-cli @react-native-community/cli
+
+Install React Native 
+
+>>> npx react-native@latest init AwesomeProject
 
