@@ -1,0 +1,59 @@
+
+1 - install choco , node , and JDK
+
+2 - Install android studio
+
+3 - Download SDK and emulator
+
+4 - add enviroment variable
+
+5 - Create React Native App
+
+6 - Run App
+
+
+
+===================================================
+1 - install Chcolatey 
+
+Link : https://chocolatey.org/install
+
+open windows power shell as administrator
+
+>>> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+
+
+Check chocolatey installed or not 
+
+>>> choco
+
+
+===================================================
+2-  install node and JDK 11 ( recommended )
+
+Link : https://reactnative.dev/docs/environment-setup?guide=native
+
+open windows power shell as administrator or run in a same powershell ( run as administrator recommended )
+
+
+>>> choco install -y nodejs-lts microsoft-openjdk11
+
+
+Check Node or JDK 
+
+>>> node -V 
+or 
+>>> node --version 
+
+
+
+>>>java -version
+
+
+
+
+
+
+
+
