@@ -1,0 +1,10 @@
+create project 
+
+>>> 
+npx react-native@latest init FirstProject01
+
+>>> 
+cd FirstProject01
+
+>>>
+npm start
