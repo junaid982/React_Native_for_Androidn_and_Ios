@@ -1,10 +1,22 @@
 create project 
 
->>> 
-npx react-native@latest init FirstProject01
-
->>> 
-cd FirstProject01
+>>>
+npm install -g react-native
 
 >>>
-npm start
+react-native init AwesomeProject
+
+>>> 
+cd AwesomeProject
+
+>>>
+npx react-native start
+
+
+>>>
+npx react-native run-android
+
+
+
+>>>
+npx react-native run-ios
