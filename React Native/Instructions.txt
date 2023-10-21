@@ -1,3 +1,55 @@
+
+
+
+
+
+
+
+
+1 - install android studeio and create one project and run in your android 
+
+
+===================================================
+2 -  install Chcolatey 
+
+Link : https://chocolatey.org/install
+
+open windows power shell as administrator
+
+>>> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+
+
+Check chocolatey installed or not 
+
+>>> choco
+
+
+===================================================
+3 - install node and java 
+
+
+>>> choco install -y nodejs-lts microsoft-openjdk11
+
+
+
+===================================================
+
+4 - Configure the ANDROID_HOME environment variable ( user )
+
+
+ANDROID_HOME
+C:\Users\ansar\AppData\Local\Android\Sdk
+
+
+
+===================================================
+5 - Add platform-tools to Path  ( System )
+
+
+
+
+
 >>>
 
 npx react-native@latest init AwesomeProject
