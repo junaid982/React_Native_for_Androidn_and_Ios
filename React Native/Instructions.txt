@@ -1,0 +1,11 @@
+>>>
+
+npx react-native@latest init AwesomeProject
+
+>>>
+cd projectName
+
+
+>>>
+
+npm start
