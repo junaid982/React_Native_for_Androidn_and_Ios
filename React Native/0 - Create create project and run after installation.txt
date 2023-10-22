@@ -1,14 +1,19 @@
 create project 
 
+# install reacr native 
 >>>
 npm install -g react-native
 
+
+# create native project 
 >>>
 react-native init AwesomeProject
+
 
 >>> 
 cd AwesomeProject
 
+# run project 
 >>>
 npx react-native start
 
