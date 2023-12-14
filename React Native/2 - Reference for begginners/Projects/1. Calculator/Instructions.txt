@@ -1,0 +1,18 @@
+https://github.com/ReactNativeSchool/react-native-calculator
+
+
+* Installation
+
+>>> git clone https://github.com/ReactNativeSchool/react-native-calculator
+
+>>> npm install
+
+
+
+* Running
+
+>>> npm run android
+
+>>> npm run ios
+
+

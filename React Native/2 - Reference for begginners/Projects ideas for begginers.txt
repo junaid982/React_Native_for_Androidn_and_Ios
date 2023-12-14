@@ -1,0 +1,29 @@
+https://www.interviewbit.com/blog/react-native-projects/
+
+
+
+Top React Native Projects for Beginners to Advanced
+
+1. Calculator
+
+2. Stopwatch/timer Application
+
+3. Notes Making Application
+
+4. Water Tracker Application:
+
+5. Wallpaper App
+
+6. Recipes App
+
+7. Calendar
+
+8. Music App
+
+9. Car Booking App
+
+10. E-Commerce app
+
+11. Social Media App
+
+12. Chat App
