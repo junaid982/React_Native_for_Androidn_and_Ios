@@ -130,13 +130,14 @@
 
 
 
-import { View, Text, Switch } from 'react-native'
+import { View, Text, Switch, Touchable, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 const App = () => {
 
   const [darkTheme, setDarkTheme] = useState(false)
-const [result , setResult] = useState("Junaid Ansari")
+  const [result, setResult] = useState("")
 
   const colors = {
     dark: "#22252D",
@@ -147,6 +148,72 @@ const [result , setResult] = useState("Junaid Ansari")
     light2: "#F7F7F7",
   }
 
+  // function to handle dark and light theme 
+  const getColor = (light, dark) => {
+    return darkTheme ? dark : light
+  };
+
+  const getBtnColor = (type) => {
+
+    if (type == "top") {
+      return "#35FBD6"
+    }
+    else if (type == "right") {
+      return "#EB6363"
+    }
+    else {
+      return getColor(colors.dark, colors.light)
+    }
+
+  }
+
+  const calculate = (title) => {
+
+    if (title == "C") {
+      setResult("")
+    }
+    else if (title == "DL") {
+      setResult(result.substring(0, result.length - 1))
+
+    }
+    else if (title == "=") {
+      setResult(eval(result))
+    }
+    else {
+      setResult(result + title)
+    }
+
+  }
+
+  const Btn = ({ title, type }) => (
+    <TouchableOpacity
+      onPress={() => {
+        calculate(title)
+      }}
+
+      style={{
+        padding: 10,
+        borderRadius: 10,
+        elevation: 2,
+        backgroundColor: getColor(colors.light1, colors.dark2),
+        height: 80,
+        width: 80,
+        margin: 5
+      }}
+    >
+      <Text
+        style={{
+          fontSize: 37,
+          color: getBtnColor(type),
+          textAlign: "center",
+          textAlignVertical: "center",
+
+        }}
+      >
+        {title}
+      </Text>
+    </TouchableOpacity>
+  )
 
 
 
@@ -156,7 +223,7 @@ const [result , setResult] = useState("Junaid Ansari")
         height: "100%",
         width: "100%",
         paddingVertical: 20,
-        backgroundColor : darkTheme ? colors.dark : colors.light,
+        backgroundColor: getColor(colors.light, colors.dark),
         // alignItems :"center" // to center a switch 
 
       }}
@@ -166,12 +233,62 @@ const [result , setResult] = useState("Junaid Ansari")
       <Switch
         value={darkTheme}
         onValueChange={() => { setDarkTheme(!darkTheme) }}
-        thumbColor={darkTheme ? colors.light : colors.dark}
+        thumbColor={getColor(colors.light, colors.dark)}
         trackColor={{ true: colors.light2, false: colors.dark2 }}
       />
 
 
-      <Text >{result}</Text>
+      <Text
+        style={{
+          fontSize: 40,
+          color: getColor(colors.dark, colors.light),
+          width: "100%",
+          textAlign: "right",
+          marginTop: 180,
+          paddingBottom: 20
+        }}
+      >
+        {result}
+      </Text>
+
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          backgroundColor: getColor(colors.light1, colors.dark1),
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          paddingTop: 20
+        }}
+      >
+
+        <Btn title="C" type="top" />
+        <Btn title="DL" type="top" />
+        <Btn title="/" type="top" />
+        <Btn title="%" type="top" />
+
+        <Btn title="7" type="number" />
+        <Btn title="8" type="number" />
+        <Btn title="9" type="number" />
+        <Btn title="*" type="right" />
+
+        <Btn title="4" type="number" />
+        <Btn title="5" type="number" />
+        <Btn title="6" type="number" />
+        <Btn title="-" type="right" />
+
+        <Btn title="1" type="number" />
+        <Btn title="2" type="number" />
+        <Btn title="3" type="number" />
+        <Btn title="+" type="right" />
+
+        <Btn title="00" type="number" />
+        <Btn title="0" type="number" />
+        <Btn title="." type="number" />
+        <Btn title="=" type="right" />
+
+      </View>
 
     </View>
   )
