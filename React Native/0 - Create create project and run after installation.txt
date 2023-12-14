@@ -21,7 +21,30 @@ npx react-native start
 >>>
 npx react-native run-android
 
-
+>>> npm start 
 
 >>>
 npx react-native run-ios
+
+
+
+
+
+
+==================================================
+
+Install react native and create project 
+Create a Folder in your path 
+And open cmd inside this folder 
+And run this command to check and install react native 
+>>> node -v
+>>> npm -v
+>>> npm config list
+>>> npx -v
+>>> npm install -g npx
+>>> npm install -g react-native
+
+Create react native project 
+>>> npx react-native@latest init FirstProject01
+
+>>> npm run android
