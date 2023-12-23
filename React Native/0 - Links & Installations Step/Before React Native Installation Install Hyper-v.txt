@@ -1,0 +1,11 @@
+before installation of react native install Enable Hyper-v
+
+follow this Link to Enable Hyper-v
+
+https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+
+
+and for installation of react native follow 
+this Link 
+
+https://reactnative.dev/docs/environment-setup

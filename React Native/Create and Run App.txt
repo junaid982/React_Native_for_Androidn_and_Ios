@@ -1,7 +1,7 @@
 Create App
 
->>> npx react-native init WorldWeather
+>>> npx react-native@latest init WorldWeather
 
 >>> cd WorldWeather
 
->>> npx react-native start
+>>> npx start
