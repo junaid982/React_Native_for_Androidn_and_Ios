@@ -19,6 +19,8 @@ enter all the answer and password and save this info
 anfer all submition it will create a .key
 eg 
 
+Press y
+
 my-upload-key.keystore
 
 

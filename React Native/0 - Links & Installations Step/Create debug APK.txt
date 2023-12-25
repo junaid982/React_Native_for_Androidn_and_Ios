@@ -1,5 +1,20 @@
+Create Ddebug Apk
+
+Step 1:
+create folder name ( assets ) on 
+
+before folder creation 
+
+\android\app\src\main
+
+after folder creation 
+
+\android\app\src\main\assets
+
 
 Step 1: Go to the root of the project in the terminal and run the below command:
+
+
 
 >>> react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 
