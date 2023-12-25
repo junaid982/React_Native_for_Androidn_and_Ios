@@ -9,3 +9,8 @@ and for installation of react native follow
 this Link 
 
 https://reactnative.dev/docs/environment-setup
+
+
+after all these run this command to install react native globally
+
+>>> npm install --save react-native
