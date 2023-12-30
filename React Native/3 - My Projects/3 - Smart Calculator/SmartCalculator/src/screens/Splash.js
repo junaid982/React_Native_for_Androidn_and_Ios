@@ -51,7 +51,7 @@ const Splash = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      props.navigation.replace('Home')
+      props.navigation.replace('Privacy')
     }, 2000)
   }, [])
 
