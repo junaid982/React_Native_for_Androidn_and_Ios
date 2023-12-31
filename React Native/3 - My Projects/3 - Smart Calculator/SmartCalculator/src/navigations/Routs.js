@@ -7,6 +7,7 @@ import Splash from '../screens/Splash'
 import Home from '../screens/Home'
 import About from '../screens/About'
 import Privacy from '../screens/Privacy'
+import Onboarding from '../components/Onboarding'
 
 const stack = createNativeStackNavigator()
 
@@ -15,12 +16,13 @@ const Routs = () => {
     <NavigationContainer>
 
       <stack.Navigator
-        initialRouteName='Splash'
+        // initialRouteName='Splash'
         screenOptions={{ headerShown: false }}
       >
 
         <stack.Screen name="Splash" component={Splash} />
         <stack.Screen name='Privacy' component={Privacy} />
+        <stack.Screen name='Onboading' component={Onboarding} />
         <stack.Screen name="Home" component={Home} />
         <stack.Screen name="About" component={About} />
 

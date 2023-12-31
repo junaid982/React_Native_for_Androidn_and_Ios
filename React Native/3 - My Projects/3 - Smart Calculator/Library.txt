@@ -1,3 +1,10 @@
 npm install @react-native-async-storage/async-storage
 
-one time page show 
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
+
+Onboading library
+
+https://www.npmjs.com/package/react-native-onboarding-swiper
+
+

@@ -18,7 +18,7 @@ after folder creation
 
 Step 2: Go to the root of the project in the terminal and run the below command:
 
-
+>>> npm install -g react-native
 
 >>> react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 
