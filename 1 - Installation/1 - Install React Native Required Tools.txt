@@ -1,0 +1,214 @@
+# Document Date 15 May 2026
+------------------------------
+
+Windows Installation
+
+
+# To start with React Native Install Required Tools 
+
+# Application Requirements
+
+1 - node.js
+2 - JavaJDK
+3 - Android Studio
+4 - Vs COde
+5 - Physical Device
+
+=================================================================================================================================
+# Installation 
+
+1 - node.js
+
+Version       : v24.15.0
+Download Link : https://nodejs.org/en/download?utm_source=chatgpt.com
+
+# Verify Installation 
+
+>>> node --version
+>>> npm --version
+
+=================================================================================================================================
+
+2 - JavaJDK
+
+Version       : 17
+Download Link : https://www.openlogic.com/openjdk-downloads
+
+
+# JDK Configurations
+---------------------------------------------------------------------------------------------------
+a - JAVA_HOME ( System Variable / User Variable )
+
+
+windows key > search "Enviroment variable" Open
+CLick Enviroment variable
+
+
+- User Variable 
+New > 
+variable name  : JAVA_HOME
+variable value : C:\Program Files\OpenLogic\jdk-17.0.18.8-hotspot
+
+
+- System Variable 
+New > 
+variable name  : JAVA_HOME
+variable value : C:\Program Files\OpenLogic\jdk-17.0.18.8-hotspot 
+
+
+---------------------------------------------------------------------------------------------------
+
+b - Setup paths
+
+- System Variable 
+click paths > New 
+
+C:\Program Files\OpenLogic\jdk-17.0.18.8-hotspot
+
+
+New 
+
+C:\Program Files\OpenLogic\jdk-17.0.18.8-hotspot\bin
+
+
+Press OK to save 
+
+
+
+
+# Verify Installation 
+
+>>> java --version
+>>> javac --version
+
+
+
+
+=================================================================================================================================
+
+3 - Android Studio
+
+
+Version       : Latest 
+Download Link : https://developer.android.com/studio 
+
+
+# Install Android Studio with standard setting 
+
+# When Android Studio open first time 
+This message will Appear
+
+"Welcome to android studio"
+
+CLick on "More Action"
+
+
+> SDK Manager
+
+
+SDK Plateform 
+- Android 16
+
+
+SDK tools
+- Android build-tools
+- Android SDK Command-line Tools (CLI)
+- Android Auto API Simulator
+- Android Auto-Desktop
+- Android Emulator
+- Android SDK Plateform tools
+- Google Play APK Extension
+- Google Play Licensing Library
+- Google Play Services
+- Google USB Repository
+- Google USB Driver
+- Google Web 
+
+
+
+Apply and Ok
+
+
+
+
+# Android Studio Configurations
+
+
+windows key > search "Enviroment variable" Open
+CLick Enviroment variable
+
+
+- User Variable 
+New > 
+variable name  : ANDROID_HOME
+variable value : C:\Users\Ultron\AppData\Local\Android\Sdk
+
+
+- System Variable 
+New > 
+variable name  : ANDROID_HOME
+variable value : C:\Users\Ultron\AppData\Local\Android\Sdk
+
+
+
+- System Variable 
+click paths > New 
+
+C:\Users\Ultron\AppData\Local\Android\Sdk
+
+
+New 
+
+C:\Program Files\OpenLogic\jdk-17.0.18.8-hotspot\bin
+
+
+Press OK to save 
+
+
+
+
+
+
+=================================================================================================================================
+
+4 - Vs Code ( Code Editor )
+ 
+Version       : Latest 
+Download Link : https://code.visualstudio.com/
+
+
+# Install with Standard Settings
+
+
+=================================================================================================================================
+
+5 - Physical Device
+
+Just Open Android Studio
+
+
+- Prepair Android Physical Device ,
+
+settings > Build Version 
+
+tab 5 to 10 times ( Developer Mode will enable )
+
+
+1 - Search usb Debugging option ,
+2 - connect device to system via USB and enable Debugging option
+	it will you to allow and Installation will complete 
+
+
+
+
+# Verification 
+
+# Check ADB Deriver
+
+>>> adb --version
+
+>>> adb devices
+
+
+=================================================================================================================================
+
