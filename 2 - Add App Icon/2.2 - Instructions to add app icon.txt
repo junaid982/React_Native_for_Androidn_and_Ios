@@ -1,0 +1,128 @@
+
+
+Instructions to add App icon on Android App,
+
+
+
+Reference : https://www.youtube.com/watch?v=_hgsAlPTGXY
+
+
+# AIM
+--------
+1 - Application Name 
+2 - Custom App Icon
+
+
+--------------------------------------------------------------------
+
+1 - Application Name 
+
+
+
+--------------------------------------------------------------------
+2 - Custom App Icon
+
+---------------------------------------
+a - Create Icon Bundle
+
+Open Web Browser and Open this Link Below 
+
+Link : "https://easyappicon.com"
+
+
+---------------------------------------
+b - Select Image section
+
+you can see 3 options 
+( "CLipart" , "Text" , "Image" )
+
+
+CLick on Image .
+
+- Upload your application Icon ,
+- Select white Background color,
+- Adjust Padding ( Zoom )
+
+- Download the Icon Bundle
+
+
+
+---------------------------------------
+c - Extract the Downloaded Icon bundle
+
+
+Goto Extracted bundle > android > 
+
+and Copy these folders 
+
+mipmap-anydpi-v26
+mipmap-hdpi
+mipmap-ldpi
+mipmap-mdpi
+mipmap-xhdpi
+mipmap-xxhdpi
+mipmap-xxxhdpi
+
+
+
+# Now Open React Native Project Directory
+
+
+android > app > src > main > res
+
+and Paste this Copeid Directories and replace old with new 
+
+
+
+
+---------------------------------------
+d - Edit AndroidManifest.xml
+
+Open 
+project1\android\app\src\main\AndroidManifest.xml
+
+
+and remove this line 
+
+      android:roundIcon="@mipmap/ic_launcher_round"
+
+
+and save the file ,
+
+
+
+
+---------------------------------------
+e - Create colors.xml
+
+Create 
+
+project1\android\app\src\main\res\values\colors.xml
+
+----------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>
+
+----------------------------------------------------------------------
+
+
+
+
+
+3 - Restart The APP 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

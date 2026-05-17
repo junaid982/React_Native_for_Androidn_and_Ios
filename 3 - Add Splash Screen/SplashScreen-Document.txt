@@ -1,0 +1,181 @@
+REACT NATIVE SPLASHSCREEN
+THEORITICAL PART
+
+A splash screen is the initial screen that appears when you launch a mobile app. It usually displays the app's logo, name, or branding while the app is loading in the background. It gives a professional touch and improves user experience by making the startup feel smooth.
+
+---------------------------------------------
+- In React Native, Android devices use different screen densities (DPI levels), 
+- which means images like splash screens need to be available in multiple resolutions to look sharp on all devices. 
+- The `drawable` folders in Android are designed to store images for different screen densities. 
+
+- Here's what each one means:
+
+----------------------------------------------
+1. Android Screen Densities (DPI)
+
+- DPI (dots per inch) represents the screen's pixel density. Android categorizes screens into different density levels:
+
+| Density Level                    | Multiplier | Example Devices               |
+| -------------------------------- | ---------- | ----------------------------- |
+| mdpi (Medium)                    | 1.0x       | Low-end devices (rare)        |
+| hdpi (High)                      | 1.5x       | Older mid-range phones        |
+| xhdpi (Extra High)               | 2.0x       | Most mid-range devices        |
+| xxhdpi (Extra Extra High)        | 3.0x       | High-end and flagship devices |
+| xxxhdpi (Extra Extra Extra High) | 4.0x       | Very high-resolution screens  |
+
+
+
+
+----------------------------------------------
+2. Required Splash Screen Sizes
+
+- Since Android scales images based on screen density, 
+- we need multiple versions of the splash screen:
+
+| Folder Name      | Image Size (px) | Density Multiplier |
+| ---------------- | --------------- | ------------------ |
+| drawable-hdpi    | 480 × 800 px    | 1.5x               |
+| drawable-xhdpi   | 720 × 1280 px   | 2.0x               |
+| drawable-xxhdpi  | 1080 × 1920 px  | 3.0x               |
+| drawable-xxxhdpi | 1440 × 2560 px  | 4.0x               |
+
+
+- Each of these folders is used automatically by Android depending on the device's screen density.
+- On Android: The splash screen is usually set in `android/app/src/main/res/drawable/` folders.
+
+- For best results, we need to create a 2048 × 2048 px square image with a centered logo and use Ape Tools to generate all required sizes automatically.
+
+                                              
+----------------------------------------------
+3. PRACTICAL PART
+
+                                        
+
+1. How to create a 2048 × 2048 px square image with a centered logo?
+
+      → we can use Adobe Photoshop or Canva.
+
+2. Than go to APE TOOLS and create necessary folder for android splash screen.
+3. We need to install npm i react-native-splash-screen 
+
+4. Than go to your android/settings.gradle file, make the following additions:
+
+include ':react-native-splash-screen'
+
+project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
+
+5. In your android/app/build.gradle file, add the `:react-native-splash-screen` project as a compile-time dependency:
+
+implementation project(':react-native-splash-screen')
+
+6. Update the `MainActivity.kt` to use react-native-splash-screen via the following changes:
+
+import android.os.Bundle;
+import org.devio.rn.splashscreen.SplashScreen;
+
+
+
+      override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)  // First, call the superclass method
+        SplashScreen.show(this)  // Then show the splash screen
+    }
+
+
+7. Create a file called `launch_screen.xml` in `app/src/main/res/layout` (create the `layout`-folder if it doesn't exist). The contents of the file should be the following:
+
+we have to create a layout folder inside res folder because its not present initially.
+
+      Than we have to create a new file with `launch_screen.xml` name. we will copy and paste below     code in that file.
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+<ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/launch_screen" android:scaleType="centerCrop" />
+</RelativeLayout>
+
+8. Than we will go to **values** folder inside **styles.xml** file and change with newly created file name:
+
+From This ------------------>
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
+    </style>
+
+</resources>
+
+
+To This <-----------------------
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:editTextBackground">@layout/launch_screen</item>
+    </style>
+
+</resources>
+
+
+9. Now we will copy generated splashScreen files and paste it inside  
+
+     **android → app → src → main → res** folder inside
+
+10. Than we will change **launch_screen.xml** file 
+
+From this------------------->
+
+<resources>
+
+<!-- Base application theme. -->
+<style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="android:editTextBackground">@layout/launch_screen</item>
+</style>
+
+</resources>
+
+To this <----------------------
+
+xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/screen" android:scaleType="centerCrop" />
+</RelativeLayout>
+
+11. 
+Open android/gradle.properties
+Add the following lines (if not present):
+    
+    android.useAndroidX=true
+    android.enableJetifier=true
+    
+    
+
+12. Lastly we have to go app.jsx file:
+
+import React, { useEffect } from "react";
+import { Platform } from "react-native";
+import SplashScreen from "react-native-splash-screen"; // Ensure this package is installed
+
+const App = () => {
+useEffect(() => {
+if (Platform.OS === "android") {
+SplashScreen.hide();
+}
+}, []);
+
+return (
+// Your main app component here
+null
+);
+};
+
+export default App;

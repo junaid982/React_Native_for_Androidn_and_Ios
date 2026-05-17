@@ -1,0 +1,20 @@
+
+# Create Application 
+>>> npx @react-native-community/cli init project_name
+
+
+>>> cd project_name
+>>> code .
+
+# Start Project 
+
+>>> npx react-native run-android 
+
+
+
+# Create gradle
+
+>>> cd android
+>>> gradlew clean
+>>> cd ..
+>>> npx react-native run-android
